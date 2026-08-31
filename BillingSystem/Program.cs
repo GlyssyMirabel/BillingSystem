@@ -12,6 +12,7 @@ namespace BillingSystem
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new LoginForm()); //Owner version
+            Application.Run(new LoginForm()); //Developer 1 version
         }
     }
 }
