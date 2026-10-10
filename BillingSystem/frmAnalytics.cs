@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+// This is the frmAnalytics class, which is a Windows Form that displays analytics and key performance indicators (KPIs) for the billing system. It connects to a MySQL database to retrieve data about customers, revenue, and unpaid bills, and displays this information in labels and a DataGridView.
 namespace BillingSystem
 {
     public partial class frmAnalytics : Form
@@ -26,6 +26,7 @@ namespace BillingSystem
             dgvTop5.Columns["TotalBilled"].DataPropertyName = "TotalBilled";
         }
 
+        //Final version of the LoadKpiSummary method that retrieves and displays key performance indicators (KPIs) from the database. It calculates the total number of customers, total revenue from paid bills, and total unpaid amounts from unpaid bills, and updates the corresponding labels on the form.
         private void LoadKpiSummary()
         {
             try
