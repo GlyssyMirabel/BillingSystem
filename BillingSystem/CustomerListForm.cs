@@ -504,5 +504,12 @@ namespace BillingSystem
 
             this.Close();
         }
+
+        private void btnAuditLog_Click(object sender, EventArgs e)
+        {
+            frmAuditLogs auditForm = new frmAuditLogs();
+            auditForm.ShowDialog(this);
+
+        }
     }
 }
