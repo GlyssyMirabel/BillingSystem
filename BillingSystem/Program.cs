@@ -11,8 +11,8 @@ namespace BillingSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm()); //Owner version
-            Application.Run(new LoginForm()); //Developer 1 version
+            Application.Run(new SplashScreen()); //Owner version
+            Application.Run(new SplashScreen()); //Developer 1 version
         }
     }
 }

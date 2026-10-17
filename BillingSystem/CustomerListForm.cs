@@ -1,15 +1,15 @@
-﻿using System.Data;
-using MySql.Data.MySqlClient;
-using BillingSystem.Database;
+﻿using BillingSystem.Database;
+using BillingSystem.Utils;
 using ClosedXML.Excel;
-using System.IO;
-using PdfSharp.Pdf;
+using MySql.Data.MySqlClient;
 using PdfSharp.Drawing;
-
+using PdfSharp.Pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -484,6 +484,15 @@ namespace BillingSystem
             }
 
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            AuditLogger.Log("LOGOUT",
+            $"{AppSession.CurrentFullName} ({AppSession.CurrentRole}) logged out.");
+            AppSession.Clear();
+
+            this.Close();
         }
     }
 }
