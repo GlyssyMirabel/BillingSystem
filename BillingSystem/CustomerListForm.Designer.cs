@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblTitle = new Label();
             dgvCustomers = new DataGridView();
             btnAdd = new Button();
@@ -38,8 +39,15 @@
             btnAnalytics = new Button();
             btnExportExcel = new Button();
             btnExportPdf = new Button();
+            btnManagePermissions = new Button();
+            statusStrip1 = new StatusStrip();
+            lblStatusUser = new ToolStripStatusLabel();
+            lblStatusSep = new ToolStripStatusLabel();
+            lblStatusTime = new ToolStripStatusLabel();
+            timer1 = new System.Windows.Forms.Timer(components);
             btnAuditLog = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lblTitle
@@ -69,6 +77,7 @@
             dgvCustomers.TabIndex = 1;
             dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
             dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
+            dgvCustomers.CellFormatting += dgvCustomers_CellFormatting;
             dgvCustomers.SelectionChanged += dgvCustomers_SelectionChanged;
             // 
             // btnAdd
@@ -139,7 +148,7 @@
             // 
             // btnExportExcel
             // 
-            btnExportExcel.Location = new Point(255, 616);
+            btnExportExcel.Location = new Point(301, 617);
             btnExportExcel.Margin = new Padding(3, 4, 3, 4);
             btnExportExcel.Name = "btnExportExcel";
             btnExportExcel.Size = new Size(112, 31);
@@ -150,7 +159,7 @@
             // 
             // btnExportPdf
             // 
-            btnExportPdf.Location = new Point(396, 616);
+            btnExportPdf.Location = new Point(442, 617);
             btnExportPdf.Margin = new Padding(3, 4, 3, 4);
             btnExportPdf.Name = "btnExportPdf";
             btnExportPdf.Size = new Size(101, 31);
@@ -158,6 +167,51 @@
             btnExportPdf.Text = "Export to PDF";
             btnExportPdf.UseVisualStyleBackColor = true;
             btnExportPdf.Click += btnExportPdf_Click;
+            // 
+            // btnManagePermissions
+            // 
+            btnManagePermissions.Location = new Point(301, 541);
+            btnManagePermissions.Name = "btnManagePermissions";
+            btnManagePermissions.Size = new Size(222, 29);
+            btnManagePermissions.TabIndex = 10;
+            btnManagePermissions.Text = "Manage Permissions";
+            btnManagePermissions.UseVisualStyleBackColor = true;
+            btnManagePermissions.Click += btnManagePermissions_Click;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.ImageScalingSize = new Size(20, 20);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusUser, lblStatusSep, lblStatusTime });
+            statusStrip1.Location = new Point(0, 653);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(896, 26);
+            statusStrip1.TabIndex = 11;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // lblStatusUser
+            // 
+            lblStatusUser.Name = "lblStatusUser";
+            lblStatusUser.Size = new Size(41, 20);
+            lblStatusUser.Text = "User:";
+            // 
+            // lblStatusSep
+            // 
+            lblStatusSep.Name = "lblStatusSep";
+            lblStatusSep.Size = new Size(798, 20);
+            lblStatusSep.Spring = true;
+            lblStatusSep.Text = "    ";
+            // 
+            // lblStatusTime
+            // 
+            lblStatusTime.Name = "lblStatusTime";
+            lblStatusTime.Size = new Size(42, 20);
+            lblStatusTime.Text = "Time";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // btnAuditLog
             // 
@@ -175,6 +229,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(896, 679);
+            Controls.Add(statusStrip1);
+            Controls.Add(btnManagePermissions);
+            ClientSize = new Size(896, 679);
             Controls.Add(btnAuditLog);
             Controls.Add(btnExportPdf);
             Controls.Add(btnExportExcel);
@@ -190,9 +247,17 @@
             Name = "CustomerListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billing System v1.0 – Customer List (C.N.)";
+            Load += CustomerListForm_Load_1;
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -207,6 +272,12 @@
         private Button btnAnalytics;
         private Button btnExportExcel;
         private Button btnExportPdf;
+        private Button btnManagePermissions;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel lblStatusUser;
+        private ToolStripStatusLabel lblStatusSep;
+        private ToolStripStatusLabel lblStatusTime;
+        private System.Windows.Forms.Timer timer1;
         private Button btnAuditLog;
     }
 }
