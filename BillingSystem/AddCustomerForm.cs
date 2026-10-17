@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using BillingSystem.Utils;
+
+using MySql.Data.MySqlClient;
 using BillingSystem.Database;
 
 using System;
@@ -187,6 +189,9 @@ namespace BillingSystem
 
                         if (rowsAffected > 0)
                         {
+                            AuditLogger.Log("ADD_CUSTOMER",
+                                $"New customer '{txtFullName.Text.Trim()}' added by {AppSession.CurrentUsername}.");
+
                             MessageBox.Show("Customer saved successfully.",
                                 "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -251,6 +256,10 @@ namespace BillingSystem
 
                         if (rowsAffected > 0)
                         {
+
+                            AuditLogger.Log("EDIT_CUSTOMER",
+                                $"Customer ID {_editCustomerId} updated by {AppSession.CurrentUsername}.");
+
                             MessageBox.Show("Customer updated successfully.",
                                 "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

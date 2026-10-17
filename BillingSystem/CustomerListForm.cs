@@ -1,5 +1,5 @@
-﻿using BillingSystem.Database;
-using BillingSystem.Utils;
+﻿using BillingSystem.Utils;
+using BillingSystem.Database;
 using ClosedXML.Excel;
 using MySql.Data.MySqlClient;
 using PdfSharp.Drawing;
@@ -86,6 +86,9 @@ namespace BillingSystem
 
                         if (rowsAffected > 0)
                         {
+                            AuditLogger.Log("DELETE_CUSTOMER",
+                                $"Customer ID {customerId} deleted by {AppSession.CurrentUsername}.");
+
                             MessageBox.Show("Customer deleted successfully.",
                                 "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -315,6 +318,9 @@ namespace BillingSystem
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
+            AuditLogger.Log("VIEW_ANALYTICS",
+                $"{AppSession.CurrentUsername} opened the Analytics Dashboard.");
+
             // Open the Analytics Dashboard as a dialog so the
             // Customer List stays open in the background
             frmAnalytics analyticsForm = new frmAnalytics();
@@ -374,6 +380,8 @@ namespace BillingSystem
 
                         workbook.SaveAs(saveDialog.FileName);
                     }
+                    AuditLogger.Log("EXPORT_EXCEL",
+                        $"{AppSession.CurrentUsername} exported customer list to Excel.");
 
                     MessageBox.Show("Customer list exported successfully to Excel.",
                         "Export Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -472,6 +480,8 @@ namespace BillingSystem
                         gfx.Dispose();   // finish drawing before saving
                         document.Save(saveDialog.FileName);
                     }
+                    AuditLogger.Log("EXPORT_PDF",
+                        $"{AppSession.CurrentUsername} exported customer list to PDF.");
 
                     MessageBox.Show("Customer list exported successfully to PDF.",
                         "Export Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
