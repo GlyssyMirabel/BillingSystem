@@ -72,6 +72,7 @@
             // 
             // splashTimer
             // 
+            splashTimer.Enabled = true;
             splashTimer.Interval = 2500;
             splashTimer.Tick += splashTimer_Tick;
             // 

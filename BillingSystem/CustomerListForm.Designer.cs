@@ -54,9 +54,9 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(14, 15);
+            lblTitle.Location = new Point(12, 11);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(170, 32);
+            lblTitle.Size = new Size(133, 25);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Customer List";
             lblTitle.Click += lblTitle_Click;
@@ -67,13 +67,12 @@
             dgvCustomers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCustomers.Location = new Point(57, 127);
-            dgvCustomers.Margin = new Padding(3, 4, 3, 4);
+            dgvCustomers.Location = new Point(27, 95);
             dgvCustomers.Name = "dgvCustomers";
             dgvCustomers.ReadOnly = true;
             dgvCustomers.RowHeadersWidth = 51;
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCustomers.Size = new Size(728, 536);
+            dgvCustomers.Size = new Size(715, 402);
             dgvCustomers.TabIndex = 1;
             dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
             dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
@@ -82,10 +81,9 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(199, 579);
-            btnAdd.Margin = new Padding(3, 4, 3, 4);
+            btnAdd.Location = new Point(174, 421);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(119, 31);
+            btnAdd.Size = new Size(104, 23);
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add Customer";
             btnAdd.UseVisualStyleBackColor = true;
@@ -93,10 +91,9 @@
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(342, 577);
-            btnDelete.Margin = new Padding(3, 4, 3, 4);
+            btnDelete.Location = new Point(299, 421);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(86, 31);
+            btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 3;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -104,10 +101,9 @@
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(457, 577);
-            btnLogout.Margin = new Padding(3, 4, 3, 4);
+            btnLogout.Location = new Point(396, 420);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(86, 31);
+            btnLogout.Size = new Size(75, 23);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = true;
@@ -116,20 +112,18 @@
             // txtSearch
             // 
             txtSearch.ForeColor = Color.Black;
-            txtSearch.Location = new Point(330, 21);
-            txtSearch.Margin = new Padding(3, 4, 3, 4);
+            txtSearch.Location = new Point(289, 16);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(469, 27);
+            txtSearch.Size = new Size(411, 23);
             txtSearch.TabIndex = 5;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.KeyPress += txtSearch_KeyPress;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(807, 21);
-            btnSearch.Margin = new Padding(3, 4, 3, 4);
+            btnSearch.Location = new Point(706, 16);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(86, 31);
+            btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 6;
             btnSearch.Text = "Search:";
             btnSearch.UseVisualStyleBackColor = true;
@@ -137,10 +131,9 @@
             // 
             // btnAnalytics
             // 
-            btnAnalytics.Location = new Point(573, 577);
-            btnAnalytics.Margin = new Padding(3, 4, 3, 4);
+            btnAnalytics.Location = new Point(498, 420);
             btnAnalytics.Name = "btnAnalytics";
-            btnAnalytics.Size = new Size(86, 31);
+            btnAnalytics.Size = new Size(75, 23);
             btnAnalytics.TabIndex = 7;
             btnAnalytics.Text = "Analytics";
             btnAnalytics.UseVisualStyleBackColor = true;
@@ -148,10 +141,9 @@
             // 
             // btnExportExcel
             // 
-            btnExportExcel.Location = new Point(301, 617);
-            btnExportExcel.Margin = new Padding(3, 4, 3, 4);
+            btnExportExcel.Location = new Point(227, 450);
             btnExportExcel.Name = "btnExportExcel";
-            btnExportExcel.Size = new Size(112, 31);
+            btnExportExcel.Size = new Size(98, 23);
             btnExportExcel.TabIndex = 8;
             btnExportExcel.Text = "Export to Excel";
             btnExportExcel.UseVisualStyleBackColor = true;
@@ -159,10 +151,9 @@
             // 
             // btnExportPdf
             // 
-            btnExportPdf.Location = new Point(442, 617);
-            btnExportPdf.Margin = new Padding(3, 4, 3, 4);
+            btnExportPdf.Location = new Point(345, 450);
             btnExportPdf.Name = "btnExportPdf";
-            btnExportPdf.Size = new Size(101, 31);
+            btnExportPdf.Size = new Size(88, 23);
             btnExportPdf.TabIndex = 9;
             btnExportPdf.Text = "Export to PDF";
             btnExportPdf.UseVisualStyleBackColor = true;
@@ -170,9 +161,10 @@
             // 
             // btnManagePermissions
             // 
-            btnManagePermissions.Location = new Point(301, 541);
+            btnManagePermissions.Location = new Point(289, 393);
+            btnManagePermissions.Margin = new Padding(3, 2, 3, 2);
             btnManagePermissions.Name = "btnManagePermissions";
-            btnManagePermissions.Size = new Size(222, 29);
+            btnManagePermissions.Size = new Size(194, 22);
             btnManagePermissions.TabIndex = 10;
             btnManagePermissions.Text = "Manage Permissions";
             btnManagePermissions.UseVisualStyleBackColor = true;
@@ -182,42 +174,44 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusUser, lblStatusSep, lblStatusTime });
-            statusStrip1.Location = new Point(0, 653);
+            statusStrip1.Location = new Point(0, 487);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(896, 26);
+            statusStrip1.Padding = new Padding(1, 0, 12, 0);
+            statusStrip1.Size = new Size(784, 22);
             statusStrip1.TabIndex = 11;
             statusStrip1.Text = "statusStrip1";
             // 
             // lblStatusUser
             // 
             lblStatusUser.Name = "lblStatusUser";
-            lblStatusUser.Size = new Size(41, 20);
+            lblStatusUser.Size = new Size(33, 17);
             lblStatusUser.Text = "User:";
             // 
             // lblStatusSep
             // 
             lblStatusSep.Name = "lblStatusSep";
-            lblStatusSep.Size = new Size(798, 20);
+            lblStatusSep.Size = new Size(705, 17);
             lblStatusSep.Spring = true;
             lblStatusSep.Text = "    ";
             // 
             // lblStatusTime
             // 
             lblStatusTime.Name = "lblStatusTime";
-            lblStatusTime.Size = new Size(42, 20);
+            lblStatusTime.Size = new Size(33, 17);
             lblStatusTime.Text = "Time";
             // 
             // timer1
             // 
             timer1.Enabled = true;
             timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
+            timer1.Tick += statusTimer_Tick;
             // 
             // btnAuditLog
             // 
-            btnAuditLog.Location = new Point(528, 615);
+            btnAuditLog.Location = new Point(455, 448);
+            btnAuditLog.Margin = new Padding(3, 2, 3, 2);
             btnAuditLog.Name = "btnAuditLog";
-            btnAuditLog.Size = new Size(94, 29);
+            btnAuditLog.Size = new Size(82, 25);
             btnAuditLog.TabIndex = 10;
             btnAuditLog.Text = "Audit Log";
             btnAuditLog.UseVisualStyleBackColor = true;
@@ -225,13 +219,12 @@
             // 
             // CustomerListForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(896, 679);
+            ClientSize = new Size(784, 509);
             Controls.Add(statusStrip1);
             Controls.Add(btnManagePermissions);
-            ClientSize = new Size(896, 679);
             Controls.Add(btnAuditLog);
             Controls.Add(btnExportPdf);
             Controls.Add(btnExportExcel);
@@ -243,7 +236,6 @@
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(dgvCustomers);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "CustomerListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billing System v1.0 – Customer List (C.N.)";

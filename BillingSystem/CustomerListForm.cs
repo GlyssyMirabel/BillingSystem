@@ -320,12 +320,14 @@ namespace BillingSystem
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
-            AuditLogger.Log("VIEW_ANALYTICS",
-                $"{AppSession.CurrentUsername} opened the Analytics Dashboard.");
+            
 
             // Open the Analytics Dashboard as a dialog so the
             // Customer List stays open in the background
             frmAnalytics analyticsForm = new frmAnalytics();
+            AuditLogger.Log("VIEW_ANALYTICS",
+                $"{AppSession.CurrentUsername} opened the Analytics Dashboard.");
+
             analyticsForm.ShowDialog(this);
 
 
@@ -520,6 +522,21 @@ namespace BillingSystem
         {
             try
             {
+                // Disable all buttons first.
+                // Only permissions granted by the database will enable them.
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                btnLogout.Enabled = false;
+                btnAnalytics.Enabled = false;
+                btnExportExcel.Enabled = false;
+                btnExportPdf.Enabled = false;
+                btnAuditLog.Enabled = false;
+                btnManagePermissions.Enabled = false;
+
+                _canEdit = false;
+
+
+
                 using (var conn = DatabaseConnection.GetConnection())
                 {
                     conn.Open();
@@ -564,6 +581,14 @@ namespace BillingSystem
                         }
                     }
                 }
+
+                btnLogout.Enabled =
+    string.Equals(
+        AppSession.CurrentRole,
+        "Admin",
+        StringComparison.OrdinalIgnoreCase);
+
+                UpdateButtonAppearance();
             }
             catch (Exception ex)
             {
@@ -662,5 +687,26 @@ namespace BillingSystem
             auditForm.ShowDialog(this);
 
         }
+
+        private void UpdateButtonAppearance()
+        {
+            Button[] buttons =
+            {
+        btnAdd, btnDelete, btnLogout, btnAnalytics,
+        btnExportExcel, btnExportPdf, btnAuditLog,
+        btnManagePermissions
+    };
+
+            foreach (Button button in buttons)
+            {
+                if (!button.Enabled)
+                {
+                    button.BackColor = SystemColors.Control;
+                    button.ForeColor = SystemColors.GrayText;
+                    button.UseVisualStyleBackColor = true;
+                }
+            }
+        }
+
     }
 }

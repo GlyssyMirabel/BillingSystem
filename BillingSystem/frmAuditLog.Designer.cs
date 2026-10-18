@@ -43,78 +43,88 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(34, 18);
+            lblTitle.Location = new Point(30, 14);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(199, 31);
+            lblTitle.Size = new Size(167, 25);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Audit Log Report";
             // 
             // lblFrom
             // 
             lblFrom.AutoSize = true;
-            lblFrom.Location = new Point(88, 62);
+            lblFrom.Location = new Point(77, 46);
             lblFrom.Name = "lblFrom";
-            lblFrom.Size = new Size(46, 20);
+            lblFrom.Size = new Size(38, 15);
             lblFrom.TabIndex = 1;
             lblFrom.Text = "From:";
             // 
             // dtpFrom
             // 
-            dtpFrom.Location = new Point(140, 57);
+            dtpFrom.Location = new Point(122, 43);
+            dtpFrom.Margin = new Padding(3, 2, 3, 2);
             dtpFrom.Name = "dtpFrom";
-            dtpFrom.Size = new Size(250, 27);
+            dtpFrom.Size = new Size(219, 23);
             dtpFrom.TabIndex = 2;
             // 
             // lblTo
             // 
             lblTo.AutoSize = true;
-            lblTo.Location = new Point(417, 61);
+            lblTo.Location = new Point(365, 46);
             lblTo.Name = "lblTo";
-            lblTo.Size = new Size(28, 20);
+            lblTo.Size = new Size(22, 15);
             lblTo.TabIndex = 3;
             lblTo.Text = "To:";
             // 
             // dtpTo
             // 
-            dtpTo.Location = new Point(451, 56);
+            dtpTo.Location = new Point(395, 42);
+            dtpTo.Margin = new Padding(3, 2, 3, 2);
             dtpTo.Name = "dtpTo";
-            dtpTo.Size = new Size(250, 27);
+            dtpTo.Size = new Size(219, 23);
             dtpTo.TabIndex = 4;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(734, 55);
+            btnSearch.Location = new Point(642, 41);
+            btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(94, 29);
+            btnSearch.Size = new Size(82, 22);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += frmAuditLogs_Load;
+            btnSearch.Click += btnSearch_Click;
             // 
             // dgvAuditLogs
             // 
+            dgvAuditLogs.AllowUserToAddRows = false;
+            dgvAuditLogs.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvAuditLogs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAuditLogs.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAuditLogs.Location = new Point(87, 129);
+            dgvAuditLogs.Location = new Point(12, 97);
+            dgvAuditLogs.Margin = new Padding(3, 2, 3, 2);
             dgvAuditLogs.Name = "dgvAuditLogs";
+            dgvAuditLogs.ReadOnly = true;
             dgvAuditLogs.RowHeadersWidth = 51;
-            dgvAuditLogs.Size = new Size(691, 294);
+            dgvAuditLogs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAuditLogs.Size = new Size(748, 220);
             dgvAuditLogs.TabIndex = 6;
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(734, 450);
+            btnClose.Location = new Point(642, 338);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(94, 29);
+            btnClose.Size = new Size(82, 22);
             btnClose.TabIndex = 7;
             btnClose.Text = "Close";
             btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += frmAuditLogs_Load;
+            btnClose.Click += btnClose_Click;
             // 
             // frmAuditLogs
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 503);
+            ClientSize = new Size(784, 461);
             Controls.Add(btnClose);
             Controls.Add(dgvAuditLogs);
             Controls.Add(btnSearch);
@@ -123,6 +133,8 @@
             Controls.Add(dtpFrom);
             Controls.Add(lblFrom);
             Controls.Add(lblTitle);
+            Margin = new Padding(3, 2, 3, 2);
+            MaximumSize = new Size(800, 500);
             Name = "frmAuditLogs";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Audit Log Report";
