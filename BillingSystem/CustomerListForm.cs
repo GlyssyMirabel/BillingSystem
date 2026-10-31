@@ -242,6 +242,11 @@ namespace BillingSystem
         {
             InitializeComponent();
 
+            btnChangePassword.Visible = true;
+            btnChangePassword.Enabled = true;
+            btnChangePassword.BringToFront();
+            //btnChangePassword.Location = new Point(600, 420);
+            //btnChangePassword.Size = new Size(130, 30);
 
             txtSearch.BringToFront();
 
@@ -320,7 +325,7 @@ namespace BillingSystem
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
-            
+
 
             // Open the Analytics Dashboard as a dialog so the
             // Customer List stays open in the background
@@ -708,5 +713,12 @@ namespace BillingSystem
             }
         }
 
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            using (frmChangePassword changePwdForm = new frmChangePassword())
+            {
+                changePwdForm.ShowDialog(this);
+            }
+        }
     }
 }

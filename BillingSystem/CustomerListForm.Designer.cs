@@ -22,6 +22,8 @@
 
         #region Windows Form Designer generated code
 
+
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -46,6 +48,8 @@
             lblStatusTime = new ToolStripStatusLabel();
             timer1 = new System.Windows.Forms.Timer(components);
             btnAuditLog = new Button();
+            btnChangePassword = new Button();
+            // button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -141,7 +145,7 @@
             // 
             // btnExportExcel
             // 
-            btnExportExcel.Location = new Point(227, 450);
+            btnExportExcel.Location = new Point(174, 450);
             btnExportExcel.Name = "btnExportExcel";
             btnExportExcel.Size = new Size(98, 23);
             btnExportExcel.TabIndex = 8;
@@ -151,7 +155,7 @@
             // 
             // btnExportPdf
             // 
-            btnExportPdf.Location = new Point(345, 450);
+            btnExportPdf.Location = new Point(289, 450);
             btnExportPdf.Name = "btnExportPdf";
             btnExportPdf.Size = new Size(88, 23);
             btnExportPdf.TabIndex = 9;
@@ -208,7 +212,7 @@
             // 
             // btnAuditLog
             // 
-            btnAuditLog.Location = new Point(455, 448);
+            btnAuditLog.Location = new Point(396, 449);
             btnAuditLog.Margin = new Padding(3, 2, 3, 2);
             btnAuditLog.Name = "btnAuditLog";
             btnAuditLog.Size = new Size(82, 25);
@@ -216,6 +220,20 @@
             btnAuditLog.Text = "Audit Log";
             btnAuditLog.UseVisualStyleBackColor = true;
             btnAuditLog.Click += btnAuditLog_Click;
+            // 
+            // btnChangePassword
+            // btnChangePassword
+            btnChangePassword.Location = new Point(498, 449);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(130, 23);
+            btnChangePassword.TabIndex = 12;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.Visible = true;
+            btnChangePassword.Enabled = true;
+            btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Click += btnChangePassword_Click;
+
+            // 
             // 
             // CustomerListForm
             // 
@@ -236,6 +254,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(dgvCustomers);
+            Controls.Add(btnChangePassword);
             Name = "CustomerListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billing System v1.0 – Customer List (C.N.)";
@@ -271,5 +290,7 @@
         private ToolStripStatusLabel lblStatusTime;
         private System.Windows.Forms.Timer timer1;
         private Button btnAuditLog;
+        private Button btnChangePassword;
+
     }
 }
