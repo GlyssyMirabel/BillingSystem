@@ -720,5 +720,25 @@ namespace BillingSystem
                 changePwdForm.ShowDialog(this);
             }
         }
+
+        private void btnViewBilling_Click(object sender, EventArgs e)
+        {
+            // Requirement 3.5 (Popup 1): Check if a customer row is selected
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a customer row first.",
+                                "No Customer Selected",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Get the selected customer ID from the grid row
+            int selectedCustomerID = Convert.ToInt32(dgvCustomers.SelectedRows[0].Cells["CustomerID"].Value);
+
+            // Open the history form and pass the ID
+            frmBillingHistory historyForm = new frmBillingHistory(selectedCustomerID);
+            historyForm.ShowDialog();
+        }
     }
 }
