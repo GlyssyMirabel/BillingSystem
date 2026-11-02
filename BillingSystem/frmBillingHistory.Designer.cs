@@ -30,7 +30,6 @@
         {
             lblCustomerName = new Label();
             dgvBillingHistory = new DataGridView();
-            btnClose = new Button();
             colBillingMonth = new DataGridViewTextBoxColumn();
             colPreviousReading = new DataGridViewTextBoxColumn();
             colPresentReading = new DataGridViewTextBoxColumn();
@@ -38,15 +37,16 @@
             colRatePerCubic = new DataGridViewTextBoxColumn();
             colTotalAmount = new DataGridViewTextBoxColumn();
             colStatus = new DataGridViewTextBoxColumn();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBillingHistory).BeginInit();
             SuspendLayout();
             // 
             // lblCustomerName
             // 
             lblCustomerName.AutoSize = true;
-            lblCustomerName.Location = new Point(35, 21);
+            lblCustomerName.Location = new Point(31, 16);
             lblCustomerName.Name = "lblCustomerName";
-            lblCustomerName.Size = new Size(233, 20);
+            lblCustomerName.Size = new Size(187, 15);
             lblCustomerName.TabIndex = 0;
             lblCustomerName.Text = "Billing History - [Customer Name]";
             // 
@@ -54,20 +54,13 @@
             // 
             dgvBillingHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBillingHistory.Columns.AddRange(new DataGridViewColumn[] { colBillingMonth, colPreviousReading, colPresentReading, colConsumption, colRatePerCubic, colTotalAmount, colStatus });
-            dgvBillingHistory.Location = new Point(35, 72);
+            dgvBillingHistory.Location = new Point(31, 54);
+            dgvBillingHistory.Margin = new Padding(3, 2, 3, 2);
             dgvBillingHistory.Name = "dgvBillingHistory";
             dgvBillingHistory.RowHeadersWidth = 51;
-            dgvBillingHistory.Size = new Size(928, 294);
+            dgvBillingHistory.Size = new Size(812, 220);
             dgvBillingHistory.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            btnClose.Location = new Point(629, 402);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(94, 29);
-            btnClose.TabIndex = 2;
-            btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            dgvBillingHistory.CellContentClick += dgvBillingHistory_CellContentClick;
             // 
             // colBillingMonth
             // 
@@ -118,16 +111,29 @@
             colStatus.Name = "colStatus";
             colStatus.Width = 125;
             // 
+            // btnClose
+            // 
+            btnClose.Location = new Point(550, 302);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(82, 22);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
             // frmBillingHistory
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(988, 450);
+            ClientSize = new Size(864, 338);
             Controls.Add(btnClose);
             Controls.Add(dgvBillingHistory);
             Controls.Add(lblCustomerName);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "frmBillingHistory";
             Text = "frmBillingHistory";
+            Load += frmBillingHistory_Load;
             ((System.ComponentModel.ISupportInitialize)dgvBillingHistory).EndInit();
             ResumeLayout(false);
             PerformLayout();

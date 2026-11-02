@@ -739,6 +739,10 @@ namespace BillingSystem
             // Open the history form and pass the ID
             frmBillingHistory historyForm = new frmBillingHistory(selectedCustomerID);
             historyForm.ShowDialog();
+
+            
+
+
         }
     }
 }
