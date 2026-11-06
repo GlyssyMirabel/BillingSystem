@@ -154,24 +154,28 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(144, 314);
+            btnSave.BackColor = Color.FromArgb(55, 86, 35);
+            btnSave.ForeColor = SystemColors.Control;
+            btnSave.Location = new Point(3, 313);
             btnSave.Margin = new Padding(3, 2, 3, 2);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(154, 22);
+            btnSave.Size = new Size(286, 22);
             btnSave.TabIndex = 10;
             btnSave.Text = "Save Permissions";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(357, 314);
+            btnClose.BackColor = Color.FromArgb(192, 0, 0);
+            btnClose.ForeColor = SystemColors.Control;
+            btnClose.Location = new Point(295, 313);
             btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(154, 22);
+            btnClose.Size = new Size(286, 22);
             btnClose.TabIndex = 11;
             btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // grpboxPermissions

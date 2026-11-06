@@ -94,11 +94,11 @@
             // 
             // btnSavePassword
             // 
-            btnSavePassword.BackColor = Color.Green;
+            btnSavePassword.BackColor = Color.FromArgb(55, 86, 35);
             btnSavePassword.ForeColor = SystemColors.ButtonHighlight;
-            btnSavePassword.Location = new Point(281, 266);
+            btnSavePassword.Location = new Point(183, 270);
             btnSavePassword.Name = "btnSavePassword";
-            btnSavePassword.Size = new Size(104, 23);
+            btnSavePassword.Size = new Size(185, 23);
             btnSavePassword.TabIndex = 6;
             btnSavePassword.Text = "Save Password";
             btnSavePassword.UseVisualStyleBackColor = false;
@@ -106,11 +106,11 @@
             // 
             // btnCancel
             // 
-            btnCancel.BackColor = Color.Red;
+            btnCancel.BackColor = Color.FromArgb(192, 0, 0);
             btnCancel.ForeColor = SystemColors.ButtonHighlight;
-            btnCancel.Location = new Point(403, 266);
+            btnCancel.Location = new Point(410, 270);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(75, 23);
+            btnCancel.Size = new Size(185, 23);
             btnCancel.TabIndex = 7;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
@@ -120,11 +120,12 @@
             // 
             lblChangePassword.AutoSize = true;
             lblChangePassword.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblChangePassword.Location = new Point(281, 22);
+            lblChangePassword.Location = new Point(294, 21);
             lblChangePassword.Name = "lblChangePassword";
             lblChangePassword.Size = new Size(214, 32);
             lblChangePassword.TabIndex = 8;
             lblChangePassword.Text = "Change Password";
+            lblChangePassword.Click += lblChangePassword_Click;
             // 
             // frmChangePassword
             // 

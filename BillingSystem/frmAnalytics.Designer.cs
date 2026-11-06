@@ -147,13 +147,15 @@
             // 
             // btnCloseAnalytics
             // 
+            btnCloseAnalytics.BackColor = Color.FromArgb(192, 0, 0);
+            btnCloseAnalytics.ForeColor = SystemColors.Control;
             btnCloseAnalytics.Location = new Point(877, 578);
             btnCloseAnalytics.Margin = new Padding(3, 2, 3, 2);
             btnCloseAnalytics.Name = "btnCloseAnalytics";
             btnCloseAnalytics.Size = new Size(82, 22);
             btnCloseAnalytics.TabIndex = 8;
             btnCloseAnalytics.Text = "Close";
-            btnCloseAnalytics.UseVisualStyleBackColor = true;
+            btnCloseAnalytics.UseVisualStyleBackColor = false;
             btnCloseAnalytics.Click += btnCloseAnalytics_Click;
             // 
             // frmAnalytics

@@ -11,10 +11,10 @@ namespace BillingSystem.Database
     public class DatabaseConnection
     {
         // Connection string settings — update Password if needed
-        private const string SERVER = "localhost";
+        private const string SERVER = "192.168.22.27";
         private const string DATABASE = "BillingDB";
-        private const string UID = "root";
-        private const string PASSWORD = "admin123"; 
+        private const string UID = "billing_user";
+        private const string PASSWORD = "BillingPass123!"; 
 
         private static string ConnectionString =>
             $"server={SERVER};database={DATABASE};uid={UID};pwd={PASSWORD};";

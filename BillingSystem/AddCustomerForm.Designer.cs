@@ -99,7 +99,7 @@
             // 
             txtContact.Location = new Point(156, 129);
             txtContact.Name = "txtContact";
-            txtContact.Size = new Size(222, 23);
+            txtContact.Size = new Size(225, 23);
             txtContact.TabIndex = 6;
             // 
             // lblEmail
@@ -115,7 +115,7 @@
             // 
             txtEmail.Location = new Point(157, 165);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(219, 23);
+            txtEmail.Size = new Size(224, 23);
             txtEmail.TabIndex = 8;
             // 
             // lblBalance
@@ -131,38 +131,44 @@
             // 
             txtBalance.Location = new Point(156, 205);
             txtBalance.Name = "txtBalance";
-            txtBalance.Size = new Size(218, 23);
+            txtBalance.Size = new Size(225, 23);
             txtBalance.TabIndex = 10;
             txtBalance.Text = "0.00";
             txtBalance.TextChanged += txtBalance_TextChanged;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(53, 251);
+            btnSave.BackColor = Color.FromArgb(55, 86, 35);
+            btnSave.ForeColor = SystemColors.Control;
+            btnSave.Location = new Point(27, 251);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 23);
+            btnSave.Size = new Size(114, 23);
             btnSave.TabIndex = 11;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(157, 251);
+            btnClear.BackColor = Color.FromArgb(189, 215, 238);
+            btnClear.ForeColor = SystemColors.GrayText;
+            btnClear.Location = new Point(147, 251);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(75, 23);
+            btnClear.Size = new Size(114, 23);
             btnClear.TabIndex = 12;
             btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(260, 251);
+            btnBack.BackColor = Color.FromArgb(46, 117, 182);
+            btnBack.ForeColor = SystemColors.Control;
+            btnBack.Location = new Point(267, 251);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
+            btnBack.Size = new Size(114, 23);
             btnBack.TabIndex = 13;
             btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // AddCustomerForm
             // 

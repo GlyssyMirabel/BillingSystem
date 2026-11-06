@@ -53,7 +53,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(86, 69);
+            lblUsername.Location = new Point(69, 64);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(63, 15);
             lblUsername.TabIndex = 1;
@@ -62,15 +62,15 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(183, 61);
+            txtUsername.Location = new Point(147, 56);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(100, 23);
+            txtUsername.Size = new Size(136, 23);
             txtUsername.TabIndex = 2;
             // 
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(86, 110);
+            lblPassword.Location = new Point(69, 110);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(60, 15);
             lblPassword.TabIndex = 3;
@@ -79,31 +79,35 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(183, 102);
+            txtPassword.Location = new Point(147, 102);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(100, 23);
+            txtPassword.Size = new Size(136, 23);
             txtPassword.TabIndex = 4;
             txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(102, 140);
+            btnLogin.BackColor = Color.FromArgb(31, 78, 121);
+            btnLogin.ForeColor = SystemColors.Control;
+            btnLogin.Location = new Point(69, 141);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 23);
+            btnLogin.Size = new Size(99, 23);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(183, 140);
+            btnCancel.BackColor = Color.FromArgb(192, 0, 0);
+            btnCancel.ForeColor = SystemColors.Control;
+            btnCancel.Location = new Point(184, 141);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(75, 23);
+            btnCancel.Size = new Size(99, 23);
             btnCancel.TabIndex = 6;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // LoginForm

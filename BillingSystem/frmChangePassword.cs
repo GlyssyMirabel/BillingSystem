@@ -242,7 +242,9 @@ namespace BillingSystem
             }
         }
 
+        private void lblChangePassword_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

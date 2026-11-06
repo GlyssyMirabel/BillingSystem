@@ -85,13 +85,15 @@
             // 
             // btnSearch
             // 
+            btnSearch.BackColor = Color.FromArgb(55, 86, 35);
+            btnSearch.ForeColor = SystemColors.Control;
             btnSearch.Location = new Point(642, 41);
             btnSearch.Margin = new Padding(3, 2, 3, 2);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(82, 22);
             btnSearch.TabIndex = 5;
             btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // dgvAuditLogs
@@ -111,13 +113,15 @@
             // 
             // btnClose
             // 
+            btnClose.BackColor = Color.FromArgb(192, 0, 0);
+            btnClose.ForeColor = SystemColors.Control;
             btnClose.Location = new Point(642, 338);
             btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(82, 22);
             btnClose.TabIndex = 7;
             btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // frmAuditLogs

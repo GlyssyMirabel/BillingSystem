@@ -29,11 +29,13 @@ namespace BillingSystem
 
         private void dgvCustomers_SelectionChanged(object sender, EventArgs e)
         {
-            // If no row is selected (e.g., grid is empty), do nothing
-            if (dgvCustomers.CurrentRow == null) return;
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                _selectedCustomerId = 0;
+                return;
+            }
 
-            // Read the CustomerID value from the selected row
-            var idCell = dgvCustomers.CurrentRow.Cells["CustomerID"].Value;
+            var idCell = dgvCustomers.SelectedRows[0].Cells["CustomerID"].Value;
 
             if (idCell != null && int.TryParse(idCell.ToString(), out int id))
             {
@@ -227,7 +229,13 @@ namespace BillingSystem
                             dgvCustomers.Columns["Balance"].HeaderText = "Balance (₱)";
                         }
 
+                        
+
                         lblTitle.Text = $"Customer List  ({dt.Rows.Count} record(s))";
+
+                        dgvCustomers.ClearSelection();
+                        dgvCustomers.CurrentCell = null;
+                        _selectedCustomerId = 0;
                     }
                 }
             }
@@ -242,11 +250,10 @@ namespace BillingSystem
         {
             InitializeComponent();
 
-            btnChangePassword.Visible = true;
-            btnChangePassword.Enabled = true;
-            btnChangePassword.BringToFront();
-            //btnChangePassword.Location = new Point(600, 420);
-            //btnChangePassword.Size = new Size(130, 30);
+            //btnChangePassword.Visible = true;
+            //btnChangePassword.Enabled = true;
+            //btnChangePassword.BringToFront();
+
 
             txtSearch.BringToFront();
 
@@ -288,6 +295,8 @@ namespace BillingSystem
         private void CustomerListForm_Load(object sender, EventArgs e)
         {
             LoadCustomers();
+
+
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -609,6 +618,12 @@ namespace BillingSystem
             LoadCustomers();
             ApplyPermissions();
             InitStatusStrip();
+
+            // Clear initial selection
+            dgvCustomers.ClearSelection();
+            dgvCustomers.CurrentCell = null;
+            _selectedCustomerId = 0;
+
         }
 
         private void InitStatusStrip()
@@ -739,10 +754,19 @@ namespace BillingSystem
             // Open the history form and pass the ID
             frmBillingHistory historyForm = new frmBillingHistory(selectedCustomerID);
             historyForm.ShowDialog();
+        }
 
-            
 
+       
 
+        private void dgvCustomers_DataBindingComplete_1(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvCustomers.ClearSelection();
+            dgvCustomers.CurrentCell = null;
         }
     }
+
+
+
+
 }

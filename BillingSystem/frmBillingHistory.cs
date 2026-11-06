@@ -16,21 +16,6 @@ namespace BillingSystem
         {
             InitializeComponent();
             customerId = selectedCustomerId;
-
-            //this.Load += frmBillingHistory_Load;
-
-            //MessageBox.Show("Billing History Form Initialized!");
-
-            
-
-            LoadCustomerName();
-
-            
-
-            LoadBillingRecords();
-
-            
-
         }
 
         private void frmBillingHistory_Load(object sender, EventArgs e)

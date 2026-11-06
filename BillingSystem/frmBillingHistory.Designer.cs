@@ -113,13 +113,15 @@
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(550, 302);
+            btnClose.BackColor = Color.FromArgb(192, 0, 0);
+            btnClose.ForeColor = SystemColors.Control;
+            btnClose.Location = new Point(720, 296);
             btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(82, 22);
             btnClose.TabIndex = 2;
             btnClose.Text = "Close";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // frmBillingHistory
